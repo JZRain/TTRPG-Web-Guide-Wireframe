@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.8;
+    color: #fff;
+    background-color: #000000;
+}
+
+header {
+    background-color: #000000;
+    color: #fff;
+    border-bottom: solid 2px #da2020;
+    padding: 10px 20px;
+}
+
+a {
+    color: #a58222; /*3383df*/
+    text-decoration: none;
+    filter: brightness(1);
+    transition: filter 0.3s ease;    
+}
+
+a:hover {
+    filter: brightness(0.7);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 70%;
+    margin: auto;
+}
+
+nav .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #da2020;
+}
+
+.nav-links {
+    list-style: none;
+    flex-direction: row;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li:nth-last-child(n) {
+    margin-right: 0;
+}
+
+.nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+/* Banner */
+.banner {
+    background-color: #000000;
+    background-image: url(images/Banner.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: 49%;
+    color: #fff;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.banner-content h1 {
+    font-size: 3.6em;
+}
+
+.banner-content p {
+    font-size: 1.2em;
+}
+
+/* Bottom Banner*/
+body {
+    background-image: url(images/Banner3.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Introduction Content */
+.intro, .guide {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.intro {
+    padding: 20px 20px 0 20px;
+    padding-left: 70px;
+    text-align: left;
+}
+
+.guide {
+    padding: 50px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.step img {
+    display: inline-block;
+    max-width: 500px;
+    max-height: 400px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0px 20px;
+    padding: 4px;
+    border: solid 2px #fff;
+}
+
+.step-text {
+    width: 70%;
+    background: transparent;
+    color: #fff;
+    padding: 20px;
+}
+
+.step:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+/* Resource Content */
+.resource {
+    margin: auto;
+    width: 70%;
+    height: auto;
+    overflow: hidden;
+    background: #eee;
+    color: #000000;
+    text-align: center;
+    border: solid 4px #000000;
+    border-radius: 8px;
+    box-shadow: 0 0 0 2px #a58222;
+    margin-bottom: 30px;
+}
+
+.resource-text {
+    padding: 20px;
+    align-items: center;
+}
+
+.resource-text h3 a {
+    padding: 4px;
+    box-shadow: 0 0 0 2px #a58222;
+
+}
+
+.map {
+    margin: 0 auto;
+}
+
+.map iframe {
+    display: flex;
+    border-radius: 8px;
+    border: solid 4px #000000;
+    box-shadow: 0 0 0 2px #fff;
+    width: 72vw;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    border-top: solid 2px #fff;
+}
+
+/* Viewport Styles for Mobile */
+@media (max-width: 425px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .logo {
+        display: flex;
+        font-size: 1.5em;
+        padding: 0;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 0.9em;
+    }
+
+    .banner {
+        width: 100%;
+        height: 200px;
+    }
+
+    .banner-content h1 {
+        font-size: 2.4em;
+        line-height: normal;
+    }
+
+    .banner-content p {
+        font-size: 1em;
+    }
+
+    .intro, .guide {
+        margin: 5%;
+        padding: 4px;
+    }
+
+    .step {
+        flex-direction: column;
+    }
+
+    .step img {
+        max-width: 100%;
+        max-height: auto;
+    }
+
+    .step-text {
+        width: 100%;
+        padding: 20px 0 0 0;
+        flex-direction: column;
+    }
+
+    .step:nth-child(2n) {
+        flex-direction: column;
+    }
+
+    footer p {
+        font-size: 0.8em;
+        padding: 0 20px;
+    }
+
+    .resource {
+        width: 90%;
+    }
+
+    #MugAndMagic {
+        padding-top: 0;
+    }
+
+    .map iframe {
+        width: 100%;
+    }
+
+    /* Bottom Banner */
+    body {
+        background-size: auto;
+    }
+}
+/* Viewport Styles for Tablet */
+@media (min-width: 425px) and (max-width: 1024px) {
+    nav {
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .banner {
+        width: 100%;
+        height: 200px;
+    }
+
+    .banner-content h1 {
+        font-size: 2.4em;
+        line-height: normal;
+    }
+
+    .intro, .guide {
+        margin: 5%;
+        padding: 4px;
+    }
+
+    .step {
+        flex-direction: column;
+    }
+
+    .step img {
+        max-width: 100%;
+        max-height: auto;
+    }
+
+    .step-text {
+        width: 100%;
+        padding: 20px 0 0 0;
+        flex-direction: column;
+    }
+
+    .step:nth-child(2n) {
+        flex-direction: column;
+    }
+
+    footer p {
+        font-size: 0.8em;
+        padding: 0 20px;
+    }
+
+    .map iframe {
+        width: 100%;
+    }
+}
